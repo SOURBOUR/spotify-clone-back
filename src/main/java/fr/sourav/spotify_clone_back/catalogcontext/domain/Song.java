@@ -26,11 +26,23 @@ public class Song implements Serializable{
     @Column(name = "author", nullable = false)
     private String author;
 
+    @Lob
+    @Column(name = "cover", nullable = false)
+    private byte[] cover;
+
     @Column(name = "cover_content_type", nullable = false)
     private String coverContentType;
 
     public long getId() {
         return id;
+    }
+
+    public byte[] getCover() {
+        return cover;
+    }
+
+    public void setCover(byte[] cover) {
+        this.cover = cover;
     }
 
     public void setId(long id) {
