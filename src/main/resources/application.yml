@@ -39,10 +39,10 @@ spring:
       enabled: true
       max-file-size: 100MB
       max-request-size: 100MB
-server:
-  port: 8080
+server:  #change the server properties
+  port: 8080 #the port on which it will be published
 
-okta:
+okta: #okta:
   oauth2:
     issuer: https://dev-p6iyafub3gs6jk2n.us.auth0.com/
     client-id: ${AUTH0_CLIENT_ID}
